@@ -2,12 +2,15 @@
 """
 2-recurse
 """
-import urllib.request
 import json
+import urllib.request
 
 
-def recurse(subreddit, hot_list=[], after=None):
+def recurse(subreddit, hot_list=None, after=None):
     """Recursively returns a list of titles of all hot articles for a subreddit"""
+    if hot_list is None:
+        hot_list = []
+
     url = "https://www.reddit.com/r/{}/hot.json?limit=100".format(subreddit)
     if after:
         url += "&after={}".format(after)

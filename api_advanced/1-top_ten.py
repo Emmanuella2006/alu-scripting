@@ -2,8 +2,8 @@
 """
 1-top_ten
 """
-import urllib.request
 import json
+import urllib.request
 
 
 def top_ten(subreddit):

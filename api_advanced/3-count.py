@@ -2,9 +2,9 @@
 """
 3-count
 """
-import urllib.request
 import json
 import re
+import urllib.request
 
 
 def count_words(subreddit, word_list, counts=None, after=None):
